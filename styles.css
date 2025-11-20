@@ -1,0 +1,142 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 1. Importar Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* 2. Aplicarla a toda la página */
+body {
+  font-family: 'Roboto', sans-serif;   /* <-- nueva línea */
+  color: #000;
+  background: #fff;
+}
+
+h1, h2 { font-weight: 700; }   /* negrita */
+
+
+/* FONDO FIJO */
+#fijo {
+  position: fixed;
+  inset: 0;
+  background: url("img/fondo.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+
+/* NAV STICKY */
+#nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(4px);
+  padding: 12px 40px;
+  border-bottom: 1px solid #ccc;
+  z-index: 10;
+}
+#nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: opacity .25s;
+}
+#nav a:hover { opacity: .6; }
+
+/* SECCIONES */
+.seccion {
+  min-height: 100vh;
+  padding: 100px 40px 60px;
+  background: rgba(255,255,255,.92);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.centrado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1 { font-size: 2.2em; margin-bottom: .4em; }
+h2 { margin-bottom: .6em; }
+ul { list-style: none; }
+a { color: #000; text-decoration: underline; }
+
+
+
+/* ----------  Grilla Gente  ---------- */
+.cat {
+  font-weight: 700;
+  margin: 50px 0 20px 0;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  transition: transform .2s;
+}
+.card:hover { transform: translateY(-4px); }
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.nombre {
+  font-weight: 700;
+  margin: 8px 0 2px;
+}
+
+.cargo {
+  font-size: .9rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.mail {
+  font-size: .85rem;
+  word-break: break-all;
+}
+
+
+/* contenedor de cada categoría */
+.bloque-categoria {
+  max-width: 900px;          /* mismo ancho que el texto de la web */
+  margin: 0 auto;            /* centrado horizontal */
+}
+
+/* opcional: separación entre bloques */
+.bloque-categoria + .bloque-categoria {
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
