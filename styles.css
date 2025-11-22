@@ -193,6 +193,8 @@ a { color: #000; text-decoration: underline; }
 .texto-bloque {
   padding-top: 12px;   /* ajustá el valor a gusto */
   text-align: justify;
+  font-weight: 300;   /* Roboto más fina */
+  line-height: 1.6;
 }
 
 .texto-bloque p:first-child {
