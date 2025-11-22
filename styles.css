@@ -109,7 +109,7 @@ a { color: #000; text-decoration: underline; }
   background: #fff;
   border: 1px solid #ddd;
   padding: 15px;
-  text-align: center;
+  text-align: left;
   transition: transform .2s;
 }
 .card:hover { transform: translateY(-4px); }
@@ -201,3 +201,52 @@ a { color: #000; text-decoration: underline; }
   margin-bottom: 1em;   /* 1 línea de separación extra */
 }
 
+/* -------  CELULARES  ------- */
+@media (max-width: 600px) {
+  /* tipos más chicos */
+  body { font-size: 15px; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.35rem; }
+
+  /* franja hero más baja */
+  
+  .hero {
+    padding: 60px 15px 40px;   /* márgenes pequeños */
+    background-size: cover;    /* llena el ancho completo */
+    height: 220px; 
+    min-height: 60vh;          /* opcional: menos alto */
+    animation: none;
+  }
+
+  /* grilla de 2 columnas → 1 columna */
+  .cat-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .cat-grid-2 .card { max-width: 220px; margin: 0 auto; }
+
+  /* texto justificado con margen lateral */
+  .texto-bloque { padding: 0 10px; }
+}
+
+/* vibración solo del fondo */
+@keyframes vibracion-fondo {
+  0%, 100% { background-position: center center; }
+  10% { background-position: calc(50% - 1px) calc(50% - 1px); }
+  20% { background-position: calc(50% + 1px) calc(50% - 1px); }
+  30% { background-position: calc(50% - 1px) calc(50% + 1px); }
+  40% { background-position: calc(50% + 1px) calc(50% + 1px); }
+  50% { background-position: calc(50% - 1px) calc(50% - 1px); }
+  60% { background-position: calc(50% + 1px) calc(50% - 1px); }
+  70% { background-position: calc(50% - 1px) calc(50% + 1px); }
+  80% { background-position: calc(50% + 1px) calc(50% + 1px); }
+  90% { background-position: calc(50% - 1px) calc(50% - 1px); }
+}
+
+.hero {
+  background: url("img/banner_2.jpg") center center/auto 65% no-repeat;
+  animation: vibracion-fondo 0.4s ease-in-out;
+  /* empieza después de 0.5 s, solo una vez */
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
