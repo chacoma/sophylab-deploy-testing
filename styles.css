@@ -1,8 +1,10 @@
 /* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* 1. Importar Roboto */
+/* 1. Importar Roboto 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* 2. Aplicarla a toda la página */
 body {
@@ -18,7 +20,7 @@ h1, h2 { font-weight: 700; }   /* negrita */
 #fijo {
   position: fixed;
   inset: 0;
-  background: url("img/fondo.jpg") center/cover no-repeat;
+  /*background: url("img/banner_2.jpg") center/cover no-repeat;*/
   z-index: -2;
 }
 
@@ -71,8 +73,8 @@ a { color: #000; text-decoration: underline; }
 /* ----------  Grilla Gente  ---------- */
 .cat {
   font-weight: 700;
-  margin: 50px 0 20px 0;
-  font-size: 1.3rem;
+  margin: 0;/*50px 0 20px 0;*/
+  font-size: 1.5rem;
   border-bottom: 2px solid #000;
   display: inline-block;
 }
@@ -154,10 +156,10 @@ a { color: #000; text-decoration: underline; }
 
 
 .hero {
-  min-height: 90vh;
+  min-height: 80vh;
   padding: 100px 100px 60px;
 
-  background: url("img/fondo1.jpg") center center/auto 60% no-repeat;
+  background: url("img/banner_2.jpg") center center/auto 65% no-repeat;
   position: relative;                       /* base para el texto */
   color: #000;
   overflow: hidden;
@@ -166,9 +168,34 @@ a { color: #000; text-decoration: underline; }
 .hero-content {
   position: absolute;     /* lo sacamos del flujo */
   left: 50%;              /* centro horizontal */
-  bottom: 15%;           /* pegado abajo */
+  bottom: 5%;           /* pegado abajo */
   transform: translateX(-50%); /* ajuste fino al centro */
   max-width: 1000px;
   width: 90%;             /* respeta márgenes laterales */
   text-align: center;
 }
+
+
+/*Grila head*/
+/* contenedor de 2 columnas para esta categoría */
+.cat-grid-2 {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* 200 px card → resto texto */
+  gap: 30px;
+  align-items: start;             /* arriba-juntos */
+  max-width: 900px;               /* mismo ancho que el resto de la web */
+  margin: 0 auto;                 /* centrado */
+}
+
+/* opción: que la card no se estire */
+.cat-grid-2 .card { width: 100%; }
+
+.texto-bloque {
+  padding-top: 12px;   /* ajustá el valor a gusto */
+  text-align: justify;
+}
+
+.texto-bloque p:first-child {
+  margin-bottom: 1em;   /* 1 línea de separación extra */
+}
+
