@@ -1,3 +1,4 @@
+
 // scroll suave para el menú
 document.querySelectorAll('#nav a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -15,3 +16,6 @@ const observador = new IntersectionObserver((entradas) => {
 }, { threshold: 0.25 });
 
 document.querySelectorAll('.seccion').forEach(sec => observador.observe(sec));
+
+
+
