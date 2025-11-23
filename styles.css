@@ -244,7 +244,7 @@ a { color: #000; text-decoration: underline; }
 }
 
 .hero {
-  background: url("img/banner_2.jpg") center center/auto 65% no-repeat;
+  background: url("img/fondo1.jpg") center center/auto 65% no-repeat;
   animation: vibracion-fondo 0.4s ease-in-out;
   /* empieza después de 0.5 s, solo una vez */
   animation-delay: 0.5s;
