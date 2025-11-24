@@ -1,0 +1,6 @@
+Aquí tienes un párrafo unificado, formal y ampliado, coherente con los anteriores y con énfasis en herramientas estadísticas:
+
+---
+
+In this research area, we seek to identify the sociocultural and cognitive components that shape the frequency and evolution of word usage, and to model the regular patterns that unfold over centuries as expressions of collective cognition. By analyzing large corpora spanning long historical periods, we use statistical and computational tools to detect systematic trends, lexical innovations, and shifts in semantic fields. These methods allow us to characterize how linguistic structures emerge, stabilize, or fade, and to quantify the influence of social dynamics, technological change, and cultural transmission on the evolution of language. Through this framework, we aim to understand not only the temporal trajectories of individual words, but also the broader mechanisms that govern linguistic adaptation in complex societies.
+
