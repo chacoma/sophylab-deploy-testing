@@ -26,7 +26,7 @@ h1, h2 { font-weight: 700; }   /* negrita */
 
 .hero {
   min-height: 80vh;
-  padding: 10px 100px 60px;
+  padding: 100px 100px 60px;
 
   background: url("img/fondo1.jpg") center center/auto 55% no-repeat;
   position: relative;                       /* base para el texto */
@@ -37,32 +37,33 @@ h1, h2 { font-weight: 700; }   /* negrita */
 .hero-content {
   position: absolute;     /* lo sacamos del flujo */
   left: 50%;              /* centro horizontal */
-  bottom: 10%;           /* pegado abajo */
+  bottom: 5%;           /* pegado abajo */
   transform: translateX(-50%); /* ajuste fino al centro */
   max-width: 1000px;
-  width: 80%;             /* respeta márgenes laterales */
+  width: 90%;             /* respeta márgenes laterales */
   text-align: center;
 }
 
 .hero h1 {
-    font-size:  5rem; /*clamp(6rem, 5vw, 3rem); entre 32 px y 48 px */
+    font-size:  4rem; /*clamp(6rem, 5vw, 3rem); entre 32 px y 48 px */
     line-height: 1.2;
   }
 
+/*
 .hero-content h3 {
   font-size: clamp(1rem, 3vw, 1.25rem);
   line-height: 1.3;
-}
+}*/
 
 
-/* FONDO FIJO 
+/* FONDO FIJO */
 #fijo {
   position: fixed;
   inset: 0;
-  /*background: url("img/banner_2.jpg") center/cover no-repeat;
+  background: url("img/banner_2.jpg") center/cover no-repeat;
   z-index: -2;
 }
-*/
+
 
 
 /****************** NAV STICKY ***************************************/
