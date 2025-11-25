@@ -8,7 +8,6 @@
 /************ APLICADO A TODA LA PAGINA ******************************/
 body {
   font-family: 'Roboto', sans-serif;   /* <-- nueva línea */
-  /*font-size:14;*/
   color: #000;
   background: #fff;
 }
@@ -24,45 +23,32 @@ h1, h2 { font-weight: 700; }   /* negrita */
   scroll-margin-top: 60px; /* si usás nav sticky */
 }
 
+
 .hero {
-  min-height: 80vh;
-  padding: 100px 100px 60px;
-
-  background: url("img/fondo1.jpg") center center/auto 55% no-repeat;
-  position: relative;                       /* base para el texto */
-  color: #000;
-  overflow: hidden;
+  text-align: center; /*  Centra el texto h1 y h3 */
+  width: 100%; 
+  padding-top: 10vh; /* controlo que tan pegado esta arriba*/
+  /* Agrega aquí cualquier otro estilo de contenedor que necesites */
 }
 
-.hero-content {
-  position: absolute;     /* lo sacamos del flujo */
-  left: 50%;              /* centro horizontal */
-  bottom: 5%;           /* pegado abajo */
-  transform: translateX(-50%); /* ajuste fino al centro */
-  max-width: 1000px;
-  width: 90%;             /* respeta márgenes laterales */
-  text-align: center;
+.hero img {
+  display: block;      /* Hace que la imagen se comporte como un bloque */
+  width: 55%;          /* El 50% del ancho del contenedor .hero-img */
+  margin: 0 auto;      /* ⬅️ Centra la imagen horizontalmente */
+  max-width: 100%;
+  height: auto;
 }
 
-.hero h1 {
-    font-size:  4rem; /*clamp(6rem, 5vw, 3rem); entre 32 px y 48 px */
-    line-height: 1.2;
-  }
-
-/*
-.hero-content h3 {
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  line-height: 1.3;
-}*/
-
-
-/* FONDO FIJO */
-#fijo {
-  position: fixed;
-  inset: 0;
-  background: url("img/banner_2.jpg") center/cover no-repeat;
-  z-index: -2;
+.hero h1{
+  font-size: 5rem;
 }
+
+.hero h3 {
+  font-size: 1.3rem;
+  color: #333; 
+}
+
+
 
 
 
@@ -75,6 +61,7 @@ h1, h2 { font-weight: 700; }   /* negrita */
   padding: 12px 40px;
   border-bottom: 1px solid #ccc;
   z-index: 10;
+  font-size: 18px;
 }
 #nav a {
   margin-right: 20px;
@@ -254,18 +241,17 @@ section.seccion {
   h2 { font-size: 1.35rem; }
   */
   
-  hero-content h1 {
-    font-size: clamp(2rem, 5vw, 3rem); /* entre 32 px y 48 px */
+  .hero-content h1 {
+    font-size: 1rem; /*clamp(2rem, 5vw, 3rem); /* entre 32 px y 48 px */
     line-height: 1.2;
+    /*bottom: 40%; */
   }
   .hero-content h3 {
-    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-size: 1rem;/*clamp(1rem, 3vw, 1.25rem);*/
     line-height: 1.3;
   }
 
   
-  .hero-content {  bottom: 40%; } /*sube un poco el texto */
-
 
 
   /* franja hero más baja */
