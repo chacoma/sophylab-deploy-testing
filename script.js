@@ -1,41 +1,17 @@
-// scroll suave para cualquier link interno
+// 1. Scroll suave para cualquier link interno
 document.querySelectorAll('#nav a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
     const target = document.querySelector(a.getAttribute('href'));
     if (!target) return;
+    target.classList.add('visible'); // fuerza visible
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
+// 2. Observador para que aparezcan las secciones al scrollear
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => e.isIntersecting && e.target.classList.add('visible'));
+}, { threshold: 0.05 });
 
-const observador = new IntersectionObserver((entradas) => {
-  entradas.forEach(entrada => {
-    if (entrada.isIntersecting) entrada.target.classList.add('visible');
-  });
-}, { threshold: 0.05 }); // 5 % para pantallas chicas
-
-
-
-function activarScroll() {
-  // limpia listeners viejos
-  document.querySelectorAll('#nav a[href^="#"]').forEach(a => {
-    a.replaceWith(a.cloneNode(true)); // clona sin listeners
-  });
-
-  // engancha nuevo listener
-  document.querySelectorAll('#nav a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (!target) return;
-      target.classList.add('visible'); // fuerza visible
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-}
-
-// primera carga + cada cambio de tamaño
-activarScroll();
-window.addEventListener('resize', activarScroll);
+document.querySelectorAll('.seccion').forEach(s => obs.observe(s));
