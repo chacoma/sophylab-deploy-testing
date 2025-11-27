@@ -262,8 +262,14 @@ section.seccion {
   }
 
 
+  #nav{
+    padding: 10px 5px;
+    font-size: 15px;
+  }
 
-
+  #nav a {
+    margin-right: 8px;
+  }
 
 
 
